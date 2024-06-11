@@ -1,7 +1,9 @@
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { disablePageScroll, enablePageScroll } from "scroll-lock";
+// import {buslogo} from "../assets/hero/buslogo";
+import buslogo from "../assets/hero/busLogo.png"; // or .svg, depending on the file type
 
-import { brainwave } from "../assets";
+// import { brainwave } from "../assets";
 import { navigation } from "../constants";
 import Button from "./Button";
 import MenuSvg from "../assets/svg/MenuSvg";
@@ -36,9 +38,17 @@ const Header = () => {
       }`}
     >
       <div className="flex items-center px-5 lg:px-7.5 xl:px-10 max-lg:py-4">
+      <Link to="/">
+
         <a className="block w-[12rem] xl:mr-8" href="#hero">
-          <img src={brainwave} width={190} height={40} alt="Brainwave" />
+          {/* <img src={buslogo} width={120} height={40} alt="Brainwave" />
+           */}
+           <h2 className="font-bold">𝕊𝕋 𝕋𝕚𝕞𝕖🚇</h2>
+
+           
+
         </a>
+        </Link>
 
         <nav
           className={`${
@@ -73,9 +83,11 @@ const Header = () => {
         >
           New account
         </a>
+        <Link to="signIn">
         <Button className="hidden lg:flex" href="#login">
           Sign in
         </Button>
+        </Link>
 
         <Button
           className="ml-auto lg:hidden"

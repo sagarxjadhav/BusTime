@@ -60,6 +60,13 @@ export const navigation = [
     "url": "mailto:sagarxjadhav@gmail.com",
     onlyMobile: true,
   },
+
+    {
+    id: "6",
+    title: "Map",
+    "url": "https://www.google.com/maps/dir///@18.1793246,74.5253936,12z/data=!4m2!4m1!3e0?entry=ttu",
+    onlyMobile: false,
+  },
 ];
 
 export const heroIcons = [homeSmile, file02, searchMd, plusSquare];
